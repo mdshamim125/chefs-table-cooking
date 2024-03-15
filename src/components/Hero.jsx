@@ -2,22 +2,29 @@ const Hero = () => {
   return (
     <div>
       <div
-        className="hero min-h-screen"
+        className="hero h-[550px] rounded-2xl"
         style={{
           backgroundImage:
-            "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+            "url(https://i.ibb.co/RzFcbSB/woman-chef-cooking-vegetables-pan.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+          <div className="max-w-[700px]">
+            <h1 className="mb-5 text-5xl font-bold">
+              Discover an exceptional cooking class tailored for you!
+            </h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Learn and Master Basic Programming, Data Structures, Algorithm,
+              OOP, Database and solve 500+ coding problems to become an
+              exceptionally well world-class Programmer.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn bg-[#0be58a] rounded-full mr-6">
+              Explore Now
+            </button>
+            <button className="btn bg-opacity-25 rounded-full text-white">
+              Our Feedback
+            </button>
           </div>
         </div>
       </div>

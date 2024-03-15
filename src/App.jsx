@@ -9,9 +9,17 @@ function App() {
 
   return (
     <>
-      <div className="mx-20">
+      <div className="lg:mx-24 mx-10">
         <Navbar></Navbar>
         <Hero></Hero>
+        <div className="text-center mt-20 mx-auto max-w-[700px]">
+          <h1 className="text-4xl">Our Recipes</h1>
+          <p className="mb-10">
+            Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
+            vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
+            elementum mauris aenean neque.{" "}
+          </p>
+        </div>
       </div>
     </>
   );

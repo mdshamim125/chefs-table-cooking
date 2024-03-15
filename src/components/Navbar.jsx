@@ -1,4 +1,5 @@
-
+import { IoPeopleCircleOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -27,51 +28,46 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Item 1</a>
+                <a>Home</a>
               </li>
               <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <a href="">Recipes</a>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>About</a>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Recipe Calories</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
+              <a>Home</a>
             </li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
+              <a href="">Recipes</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>About</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <div className="lg:block hidden">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="search"
+                className="rounded-3xl p-2 pl-10 bg-[#b9c7c178] mr-4"
+              />
+              <CiSearch className="absolute left-3 top-3" />
+            </div>
+          </div>
+
+          <a className="bg-[#0be58a] rounded-full p-2">
+            <IoPeopleCircleOutline />
+          </a>
         </div>
       </div>
     </div>
