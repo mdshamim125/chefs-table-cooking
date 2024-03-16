@@ -15,9 +15,10 @@ const Hero = () => {
               Discover an exceptional cooking class tailored for you!
             </h1>
             <p className="mb-5">
-              Learn and Master Basic Programming, Data Structures, Algorithm,
-              OOP, Database and solve 500+ coding problems to become an
-              exceptionally well world-class Programmer.
+              Uncover a bespoke cooking experience designed for you. From
+              mastering culinary basics to exploring diverse cuisines, our
+              personalized classes cater to your unique preferences and
+              aspirations.
             </p>
             <button className="btn bg-[#0be58a] rounded-full mr-6 font-semibold text-xl">
               Explore Now

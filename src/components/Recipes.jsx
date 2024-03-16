@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Recipe from "./Recipe";
 import PropTypes from "prop-types";
 
-const Recipes = ({handleForCooking}) => {
+const Recipes = ({ handleForCooking }) => {
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
     fetch("../../public/fakeData.json")

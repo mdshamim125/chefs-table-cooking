@@ -4,12 +4,12 @@ const CurrentCooking = ({ currentCooking, index }) => {
   const { recipe_name, preparing_time, calories } = currentCooking;
   return (
     <>
-      <div className="flex justify-around items-center my-2">
+      <tr className="flex justify-around items-center my-2">
         <td>{index + 1}</td>
         <td>{recipe_name}</td>
         <td>{preparing_time}</td>
         <td>{calories}</td>
-      </div>
+      </tr>
     </>
   );
 };
@@ -18,8 +18,5 @@ export default CurrentCooking;
 
 CurrentCooking.propTypes = {
   currentCooking: PropTypes.object,
-  index: PropTypes.arrayOf(PropTypes.number).isRequired,
+  index: PropTypes.number.isRequired,
 };
-
-
-

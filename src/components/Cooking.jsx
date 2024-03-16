@@ -3,11 +3,11 @@ import WantCook from "./WantCook";
 import CurrentCooking from "./CurrentCooking";
 import { useState } from "react";
 
-const Cooking = ({ wantCook, countWantCook }) => {
+const Cooking = ({ wantCook, handleToDelete }) => {
   // console.log(wantCook);
   const [currentCooking, setCurrentCooking] = useState([]);
   const [countCurrentCooking, setCount] = useState(0);
-  const handleCurrentCooking = (wantCook, recipe_id) => {
+  const handleCurrentCooking = (wantCook) => {
     const isExist = currentCooking.find(
       (cookingList) => cookingList.recipe_id === wantCook.recipe_id
     );
@@ -18,18 +18,24 @@ const Cooking = ({ wantCook, countWantCook }) => {
     }
   };
 
-  console.log(wantCook);
+  // console.log(wantCook);
 
   return (
     <div className="border border-solid border-gray-200 rounded-2xl p-4 mb-6">
       <h2 className="text-center text-2xl font-semibold my-4">
-        Want to cook: {countWantCook}
+        Want to cook: {wantCook.length}
       </h2>
-      <div className="flex justify gap-[75px] pl-4">
-        <th>Name</th>
-        <th>Time</th>
-        <th>Calories</th>
-      </div>
+
+      <table>
+        <thead>
+          <tr className="flex justify gap-[75px] pl-4">
+            <th>Name</th>
+            <th>Time</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+      </table>
+
       <div>
         {wantCook.map((wantCook, index) => (
           <WantCook
@@ -37,6 +43,7 @@ const Cooking = ({ wantCook, countWantCook }) => {
             index={index}
             wantCook={wantCook}
             handleCurrentCooking={handleCurrentCooking}
+            handleToDelete={handleToDelete}
           ></WantCook>
         ))}
         <h2 className="text-center text-2xl font-semibold my-4">
@@ -62,4 +69,5 @@ Cooking.propTypes = {
   wantCook: PropTypes.array,
   currentCooking: PropTypes.array,
   countWantCook: PropTypes.number,
+  handleToDelete: PropTypes.func,
 };
