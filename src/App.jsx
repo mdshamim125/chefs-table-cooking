@@ -5,6 +5,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Recipes from "./components/Recipes";
 import Cooking from "./components/Cooking";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [wantCook, setWantCook] = useState([]);
@@ -14,6 +16,7 @@ function App() {
     );
     if (!isExist) {
       const newRecipes = [...wantCook, recipe];
+      // toast("hi");
       setWantCook(newRecipes);
     }
   };
@@ -33,7 +36,7 @@ function App() {
             elementum mauris aenean neque.{" "}
           </p>
         </div>
-        <div className="lg:grid grid-cols-10">
+        <div className="lg:grid grid-cols-10 gap-4">
           <div className="col-span-6">
             <Recipes handleForCooking={handleForCooking}></Recipes>
           </div>

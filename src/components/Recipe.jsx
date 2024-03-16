@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 import { FiClock } from "react-icons/fi";
 import { HiMiniFire } from "react-icons/hi2";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
 const Recipe = ({ recipe, handleForCooking }) => {
   const {
     recipe_id,
@@ -42,6 +45,7 @@ const Recipe = ({ recipe, handleForCooking }) => {
           >
             Want to Cook
           </button>
+          {/* <ToastContainer /> */}
         </div>
       </div>
     </>
