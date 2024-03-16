@@ -49,6 +49,15 @@ const Cooking = ({ wantCook, handleToDelete }) => {
         <h2 className="text-center text-2xl font-semibold my-4">
           Currently cooking: {countCurrentCooking}
         </h2>
+        <table>
+          <thead>
+            <tr className="flex gap-[125px] pl-4">
+              <th>Name</th>
+              <th>Time</th>
+              <th>Calories</th>
+            </tr>
+          </thead>
+        </table>
       </div>
       <div>
         {currentCooking.map((currentCooking, index) => (
