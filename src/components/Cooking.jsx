@@ -20,7 +20,7 @@ const Cooking = ({ wantCook }) => {
 
   return (
     <div className="border border-solid border-gray-200 rounded-2xl p-4 mb-6">
-      <h2 className="text-center text-2xl">Want to cook</h2>
+      <h2 className="text-center text-2xl font-semibold my-4">Want to cook</h2>
       <div className="flex justify gap-[75px] pl-4">
         <th>Name</th>
         <th>Time</th>
@@ -35,7 +35,9 @@ const Cooking = ({ wantCook }) => {
             handleCurrentCooking={handleCurrentCooking}
           ></WantCook>
         ))}
-        <h2 className="text-center text-2xl">Currently cooking</h2>
+        <h2 className="text-center text-2xl font-semibold my-4">
+          Currently cooking
+        </h2>
       </div>
       <div>
         {currentCooking.map((currentCooking, index) => (

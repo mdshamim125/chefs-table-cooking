@@ -29,7 +29,7 @@ function App() {
         <Navbar></Navbar>
         <Hero></Hero>
         <div className="text-center mt-20 mx-auto max-w-[700px]">
-          <h1 className="text-4xl">Our Recipes</h1>
+          <h1 className="text-4xl font-semibold mb-6">Our Recipes</h1>
           <p className="mb-10">
             Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
             vulputate netus pharetra rhoncus. Eget urna volutpat curabitur

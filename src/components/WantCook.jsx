@@ -5,7 +5,7 @@ const WantCook = ({ wantCook, index, handleCurrentCooking }) => {
 
   return (
     <>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-around items-center my-2">
         <td>{index + 1}</td>
         <td>{recipe_name}</td>
         <td>{preparing_time}</td>

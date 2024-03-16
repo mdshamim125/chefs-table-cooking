@@ -19,10 +19,10 @@ const Hero = () => {
               OOP, Database and solve 500+ coding problems to become an
               exceptionally well world-class Programmer.
             </p>
-            <button className="btn bg-[#0be58a] rounded-full mr-6">
+            <button className="btn bg-[#0be58a] rounded-full mr-6 font-semibold text-xl">
               Explore Now
             </button>
-            <button className="btn bg-opacity-25 rounded-full text-white">
+            <button className="btn bg-opacity-25 rounded-full text-white font-semibold text-xl">
               Our Feedback
             </button>
           </div>
