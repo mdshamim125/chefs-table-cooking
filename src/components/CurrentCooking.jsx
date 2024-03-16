@@ -1,11 +1,22 @@
-import React from 'react';
+import { PropTypes } from "prop-types";
 
-const CurrentCooking = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const CurrentCooking = ({ currentCooking, index }) => {
+  const { recipe_name, preparing_time, calories } = currentCooking;
+  return (
+    <>
+      <div className="flex justify-around items-center">
+        <td>{index + 1}</td>
+        <td>{recipe_name}</td>
+        <td>{preparing_time}</td>
+        <td>{calories}</td>
+      </div>
+    </>
+  );
 };
 
 export default CurrentCooking;
+
+CurrentCooking.propTypes = {
+  currentCooking: PropTypes.object,
+  index: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
