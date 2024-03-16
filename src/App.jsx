@@ -10,6 +10,7 @@ import Cooking from "./components/Cooking";
 
 function App() {
   const [wantCook, setWantCook] = useState([]);
+  const [countWantCook, setCountCook] = useState(0);
   const handleForCooking = (recipe) => {
     const isExist = wantCook.find(
       (cookingList) => cookingList.recipe_id === recipe.recipe_id
@@ -18,6 +19,7 @@ function App() {
       const newRecipes = [...wantCook, recipe];
       // toast("hi");
       setWantCook(newRecipes);
+      setCountCook(countWantCook + 1);
     }
   };
 
@@ -41,7 +43,7 @@ function App() {
             <Recipes handleForCooking={handleForCooking}></Recipes>
           </div>
           <div className="col-span-4">
-            <Cooking wantCook={wantCook}></Cooking>
+            <Cooking countWantCook={countWantCook} wantCook={wantCook}></Cooking>
           </div>
         </div>
       </div>

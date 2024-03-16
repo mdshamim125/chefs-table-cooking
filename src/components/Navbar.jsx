@@ -36,6 +36,9 @@ const Navbar = () => {
               <li>
                 <a>About</a>
               </li>
+              <li>
+                <a>Search</a>
+              </li>
             </ul>
           </div>
           <a className="btn btn-ghost text-3xl font-bold">Recipe Calories</a>
@@ -50,6 +53,9 @@ const Navbar = () => {
             </li>
             <li>
               <a>About</a>
+            </li>
+            <li>
+              <a>Search</a>
             </li>
           </ul>
         </div>
