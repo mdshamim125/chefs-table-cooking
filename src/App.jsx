@@ -3,9 +3,22 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Recipes from "./components/Recipes";
+import Cooking from "./components/Cooking";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [wantCook, setWantCook] = useState([]);
+  const handleForCooking = (recipe) => {
+    const isExist = wantCook.find(
+      (cookingList) => cookingList.recipe_id === recipe.recipe_id
+    );
+    if (!isExist) {
+      const newRecipes = [...wantCook, recipe];
+      setWantCook(newRecipes);
+    }
+  };
+
+  // console.log(wantCook);
 
   return (
     <>
@@ -19,6 +32,14 @@ function App() {
             vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
             elementum mauris aenean neque.{" "}
           </p>
+        </div>
+        <div className="lg:grid grid-cols-10">
+          <div className="col-span-6">
+            <Recipes handleForCooking={handleForCooking}></Recipes>
+          </div>
+          <div className="col-span-4">
+            <Cooking wantCook={wantCook}></Cooking>
+          </div>
         </div>
       </div>
     </>
